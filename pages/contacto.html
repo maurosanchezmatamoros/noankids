@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/noankids.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/014eb7bbb1.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cabin+Sketch&display=swap');
+        </style>
+    <title>NOAN KIDS</title>
+</head>
+
+<!-- Encabezado fijo de la web -->
+
+<body>
+    <header>
+        <div class="header">
+            <nav class="nav">
+                <ul class="nav__menu">
+                    <li ><a href="quienessomos.html">QUIENES SOMOS</a></li>
+                    <li ><a href="productos.html">PRODUCTOS</a></li>
+                    <li ><a href="novedades.html">NOVEDADES</a></li>
+                    <li ><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="header__buscador">
+                <input class="header__buscador__input" type="text" placeholder=" Buscar">
+                <div class="header__buscador__redes">
+                    <a href="https://www.facebook.com/Noan-kids-105169454315117/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/noankids" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <nav class="header__mobile">
+                <div class="header__mobile__noankids"><span class="header__mobile__noan">NOAN </span><span class="header__mobile__kids">KIDS</span></div>
+                <input type="checkbox" id="hamburguesa">
+                <label for="hamburguesa"><i class="fas fa-bars"></i></label>
+                <ul class="nav__responsive__menu">
+                    <li ><a href="../index.html">HOME</a></li>
+                    <li ><a href="quienessomos.html">QUIENES SOMOS</a></li>
+                    <li ><a href="productos.html">PRODUCTOS</a></li>
+                    <li ><a href="novedades.html">NOVEDADES</a></li>
+                    <li ><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__logo">
+            <a href="../index.html"><IMG src="../assets/img/logo-sin-fondo.png" alt="noan kids logo" class="header__logo__img"></IMG></a>
+        </div>
+    </header>
+
+
+<!-- Cuerpo de la web variable -->
+
+    <section class="contacto">
+        <h3 class="contacto__titulo">CONTACTO</h3>
+        <div class="contacto__form">
+            <h4 class="contacto__form__titulo">Escribinos</h4>
+            <form class="contacto__form__form" action="get">
+                <label for="nombre">Nombre </label>
+                <input class="contacto__form__form__input" type="text" name="nombre" id="nombre" required>
+                <label for="apellido">Apellido </label>
+                <input class="contacto__form__form__input" type="text" name="apellido" id="apellido" required>
+                <label for="mail">Mail </label>
+                <input class="contacto__form__form__input" type="email" name="mail" id="mail" placeholder="nombre@ejemplo.com" required>
+                <label for="celular">Celular </label>
+                <input class="contacto__form__form__input" type="tel" name="celular" id="celular" placeholder="11-2222-3333" required>
+                <label class="contacto__form__form--mensaje" for="mensaje"></label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escriba su mensaje aquí..." required></textarea>
+                <input class="contacto__form__form--enviar" type="submit" value="Enviar">
+            </form>
+        </div>
+        <div class="contacto__ubicacion">
+            <h4 class="contacto__ubicacion__titulo">Donde Estamos</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3280.6553857172994!2d-58.47469934532023!3d-34.68864606355985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1636385209377!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <p>Guaminí 5000 (esquina F.F. de la Cruz) Plaza Sudamérica
+            <br>
+            Lunes a Viernes de 9 a 18hs
+            <br>
+            Cel.: 11-2222-3344
+            </p>
+        </div>
+    </section>
+
+<!-- Footer fijo -->
+
+    <footer class="footer">
+        <div class="footer__menu">
+            <ul>
+                <li><a href="quienessomos.html">QUIENES SOMOS</a></li>
+                <li><a href="productos.html">PRODUCTOS</a></li>
+                <li><a href="novedades.html">NOVEDADES</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </div>
+        <div class="footer__datos">
+            <p><span class="footer__datos--noan">NOAN </span><span class="footer__datos--kids">KIDS</span></p>
+            <p>Juegos Didácticos</p>
+            <a href="mailto:noankids@gmail.com">noankids@gmail.com</a>
+            <p>Whatsapp 11-2222-3344</p>
+        </div>
+        <p class="footer__datos__ubicacion">Villa Lugano - C.A.B.A. - Argentina</p>
+        <div class="footer__logo">
+            <a href="../index.html"><img src="../assets/img/logo-sin-fondo.png" alt="noan kids logo"></img></a>
+        </div>
+    </footer>
+
+</body>
+</html>
