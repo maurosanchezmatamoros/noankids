@@ -24,10 +24,13 @@
     width: 15vw;
     top: 0.1rem;
     left: 0.1rem;
+    z-index: 99;
+    transition: width 1s, opacity 5s;
 }
 
 .header__logo__img:hover {
-    padding: 0.4rem;
+    width: 17vw;
+    opacity: 0.5;
 }
 
 .header__logo--indexmobile {
@@ -92,10 +95,13 @@
     border: none;
     height: 1.5rem;
     width: 65%;
+    transition: all 3s;
 }
 
 .header__buscador__input:focus {
-    outline: none;
+    outline: #000, solid, 1rem;
+    font-size: 1.2rem;
+    
 }
 
 .header__buscador__redes {
@@ -107,10 +113,12 @@
 .header__buscador__redes a {
     color: #fff;
     display: inline-block;
+    transition: all 0.05s;
 }
 
 .header__buscador__redes a:hover {
     color: #eee;
+    font-size: 2rem;
 }
 
 .header__mobile {
@@ -195,9 +203,66 @@
     font-weight: 100;
 }
 
-.index__portada img {
+.index__portada__img1 {
     width: 100%;
     margin-top: 0.5rem;
+    z-index: 44;
+    animation-name: carrousel;
+    animation-iteration-count: infinite;
+    animation-duration: 25s;
+}
+
+.index__portada__img2 {
+    width: 100%;
+    margin-top: 0.5rem;
+    z-index: 66;
+    position: absolute;
+    left: -100vw;
+    animation-name: carrousel;
+    animation-iteration-count: infinite;
+    animation-duration: 25s;
+}
+
+.index__portada__img3 {
+    width: 100%;
+    margin-top: 0.5rem;
+    z-index: 77;
+    position: absolute;
+    position: absolute;
+    left: 100vw;
+    animation-name: carrousel;
+    animation-iteration-count: infinite;
+    animation-duration: 25s;
+}
+
+@keyframes carrousel {
+    0% {
+        transform: translate(0,0)
+    }
+    20% {
+        transform: translate(0,0)
+    }
+    25% {
+        transform: translate(100vw,0)
+    }
+    45% {
+        transform: translate(100vw,0)
+    }
+    50% {
+        transform: translate(0,0)
+    }
+    70% {
+        transform: translate(0,0)
+    }
+    75% {
+        transform: translate(-100vw,0)
+    }
+    95% {
+        transform: translate(-100vw,0)
+    }
+    100% {
+        transform: translate(0,0)
+    }
 }
 
 /*AQUI TERMINA EL MAIN DEL INDEX*/
@@ -206,12 +271,12 @@
 
 .footer {
     background-color: #D7076585;
-    height: 15rem;
+    height: 20rem;
     width: 100%;
     border-top: solid 0.5rem #D70765;
     text-align: center;
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 30% 40% 30%;
     grid-template-rows: 75% 25%;
     grid-template-areas:
     "menu datos1 logo"
@@ -224,7 +289,7 @@
     font-family: 'Architects Daughter', cursive;
     font-weight: 500;
     font-size: 1.5rem;
-    line-height: 2.5rem;
+    line-height: 3.5rem;
     text-shadow: 1px 1px 1px #333;
     grid-area: menu;
 }
@@ -240,11 +305,10 @@
 .footer__datos {
     text-align: center;
     color: #fff;
-    line-height: 1.5rem;
+    line-height: 2.8rem;
     font-family: 'Architects Daughter', cursive;
     letter-spacing: 0.05rem;
     font-size: 1.5rem;
-    line-height: 2rem;
     margin-top: 1rem;
     grid-area: datos1;
 }
@@ -281,11 +345,12 @@
 }
 
 .footer__logo img {
-    width: 10rem;
+    width: 14rem;
+    transition: width 1.5s;
 }
 
 .footer__logo img:hover {
-    padding: 0.4rem;
+    width: 18rem;
 }
 
 /*AQUI TERMINA EL FOOTER FIJO*/
@@ -698,6 +763,9 @@
 }
 
 @media screen and (max-width: 650px){
+    .footer__logo img:hover {
+        width: 14rem;
+    }
     html {
         font-size: 10px;
     }
@@ -799,6 +867,19 @@
     }
 }
 
+@media screen and (max-width: 490px){
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 85% 15%;
+        grid-template-areas:
+        "logo menu"
+        "datos2 datos2";
+    }
+    .footer__datos {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 420px){
     .header {
         border-top: none;
@@ -840,15 +921,3 @@
     }
 }
 
-@media screen and (max-width: 380px){
-    .footer {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 85% 15%;
-        grid-template-areas:
-        "logo menu"
-        "datos2 datos2";
-    }
-    .footer__datos {
-        display: none;
-    }
-}
