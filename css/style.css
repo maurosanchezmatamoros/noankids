@@ -201,15 +201,17 @@
     letter-spacing: 0.1rem;
     color: #000;
     font-weight: 100;
+    z-index: 90;
 }
 
 .index__portada__img1 {
     width: 100%;
     margin-top: 0.5rem;
     z-index: 44;
-    animation-name: carrousel;
+    animation-name: desaparece;
     animation-iteration-count: infinite;
-    animation-duration: 25s;
+    animation-duration: 15s;
+    animation-delay: 0s;
 }
 
 .index__portada__img2 {
@@ -217,10 +219,13 @@
     margin-top: 0.5rem;
     z-index: 66;
     position: absolute;
-    left: -100vw;
-    animation-name: carrousel;
+    top: 4rem;
+    left: 0;
+    animation-name: desaparece;
     animation-iteration-count: infinite;
-    animation-duration: 25s;
+    animation-duration: 15s;
+    animation-delay: 5s;
+    opacity: 0;
 }
 
 .index__portada__img3 {
@@ -228,40 +233,31 @@
     margin-top: 0.5rem;
     z-index: 77;
     position: absolute;
-    position: absolute;
-    left: 100vw;
-    animation-name: carrousel;
+    top: 4rem;
+    left: 0;
+    animation-name: desaparece;
     animation-iteration-count: infinite;
-    animation-duration: 25s;
+    animation-duration: 15s;
+    animation-delay: 10s;
+    opacity: 0;
+
 }
 
-@keyframes carrousel {
+@keyframes desaparece {
     0% {
-        transform: translate(0,0)
+        opacity: 0;
     }
-    20% {
-        transform: translate(0,0)
+    3% {
+        opacity: 1;
     }
-    25% {
-        transform: translate(100vw,0)
+    30% {
+        opacity: 1;
     }
-    45% {
-        transform: translate(100vw,0)
-    }
-    50% {
-        transform: translate(0,0)
-    }
-    70% {
-        transform: translate(0,0)
-    }
-    75% {
-        transform: translate(-100vw,0)
-    }
-    95% {
-        transform: translate(-100vw,0)
+    33% {
+        opacity: 0;
     }
     100% {
-        transform: translate(0,0)
+        opacity: 0;
     }
 }
 
