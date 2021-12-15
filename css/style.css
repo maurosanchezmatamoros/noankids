@@ -641,7 +641,6 @@
     font-family: 'Architects Daughter', cursive;
     grid-area: form;
     font-size: 1.4rem;
-    margin: 2rem 0;
 }
 
 .contacto__form__form {
@@ -649,9 +648,6 @@
     display: grid;
     grid-template-columns: 25% 75%;
     grid-template-rows: 10% 10% 10% 10% 50% 10%;
-}
-.contacto__form__boot {
-    margin: 3rem;
 }
 
 .contacto__form__titulo {
@@ -690,7 +686,6 @@
     background-color: #ddd;
 }
 
-
 .contacto__form__form--enviar {
     border: none;
     border-radius: 0.5rem;
@@ -708,7 +703,6 @@
 .contacto__form__form--enviar:hover {
     border: outset 2px #bbb;
 }
-*/
 
 .contacto__form__form--mensaje {
     display: none;
