@@ -19,35 +19,6 @@
     
 }
 
-.header__logo__img {
-    position: absolute;
-    width: 15vw;
-    top: 0.1rem;
-    left: 0.1rem;
-    z-index: 99;
-    transition: width 1s, opacity 5s;
-}
-
-.header__logo__img:hover {
-    width: 17vw;
-    opacity: 0.5;
-}
-
-.header__logo--indexmobile {
-    display: none;
-}
-
-.header__logo__img--indexmobile {
-    position: inherit;
-    width: 80%;
-    padding: 4rem 2rem;
-    opacity: 0.5;
-}
-
-.header__logo__img--indexmobile:hover {
-    padding: 4rem 2rem;
-}
-
 .nav {
     display: flex;
     align-items: center !important;
@@ -124,11 +95,13 @@
 
 .header__mobile {
     display: none;
+    color: #fff;
 }
 
 .header__mobile__noankids {
     display: inline-block;
     justify-self: center;
+    text-shadow: 1px 1px 2px #333;
 }
 
 .header__mobile__noan {
@@ -149,6 +122,7 @@
     position: absolute;
     right: 1rem;
     cursor: pointer;
+
 }
 
 .header__mobile input {
@@ -191,75 +165,144 @@
 
 /*AQUI TERMINA EL HEADER FIJO*/
 
+/*LOGO NOAN KIDS*/
+
+.logo__img {
+    position: absolute;
+    width: 15vw;
+    top: 0.2rem;
+    left: 0.2rem;
+    z-index: 99;
+    transition: width 1s, opacity 5s;
+}
+
+.logo__img:hover {
+    width: 17vw;
+    opacity: 0.5;
+}
+
+.logo--indexmobile {
+    display: none;
+}
+
+.logo__img--indexmobile {
+    position: inherit;
+    width: 80%;
+    padding: 4rem 2rem;
+    opacity: 0.5;
+}
+
+.logo__img--indexmobile:hover {
+    padding: 4rem 2rem;
+}
+
+/*FIN LOGO NOAN KIDS*/
+
 /*AQUI COMIENZA EL MAIN DEL INDEX*/
 
-.index__subtitulo {
-    position: absolute;
-    top: 5rem;
-    left: 17%;
-    font-family: 'Architects Daughter', cursive;
-    font-size: 2rem;
-    letter-spacing: 0.1rem;
-    color: #000;
-    font-weight: 100;
-    z-index: 90;
+.index__main {
+    background-color: #E49E0040;
 }
 
-.index__portada__img1 {
-    width: 100%;
-    margin-top: 0.5rem;
-    z-index: 44;
-    animation-name: desaparece;
-    animation-iteration-count: infinite;
-    animation-duration: 15s;
-    animation-delay: 0s;
+.index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.index__portada__img2 {
-    width: 100%;
-    margin-top: 0.5rem;
-    z-index: 66;
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    animation-name: desaparece;
-    animation-iteration-count: infinite;
-    animation-duration: 15s;
-    animation-delay: 5s;
-    opacity: 0;
+.index__divportada {
+    position: relative;
+    border-radius: 0.6rem;
+    margin: 1rem;
+    width: calc(100%-1rem);
+    overflow: hidden;
+    
 }
 
-.index__portada__img3 {
-    width: 100%;
-    margin-top: 0.5rem;
-    z-index: 77;
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    animation-name: desaparece;
+.index__portada {
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 600ms;
+    animation-name: carrousel;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    animation-duration: 15s;
-    animation-delay: 10s;
-    opacity: 0;
+}
 
+.index__portada__img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 100%;
+}
+
+.index__portada__img img {
+    width: 100%;
 }
 
 @keyframes desaparece {
     0% {
-        opacity: 0;
+        transform: translate3d(calc(-100% * 0), 0, 0)
     }
-    3% {
-        opacity: 1;
+    15% {
+        transform: translate3d(calc(-100% * 0), 0, 0)
     }
-    30% {
-        opacity: 1;
+    25% {
+        transform: translate3d(calc(-100% * 1), 0, 0)
     }
-    33% {
-        opacity: 0;
+    65% {
+        transform: translate3d(calc(-100% * 1), 0, 0)
+    }
+    75% {
+        transform: translate3d(calc(-100% * 2), 0, 0)
     }
     100% {
-        opacity: 0;
+        transform: translate3d(calc(-100% * 2), 0, 0)
     }
+}
+
+.index__juegosdidacticos {
+    width: 100%;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #E49E0060;
+    border-bottom: solid 0.5rem #E49E00;
+    border-top: solid 0.2rem #E49E00;
+}
+
+.index__masvendidos {
+    padding: 2rem;
+}
+
+.index__masvendidos__bloque {
+    border: solid 2px #E49E0070;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.index__masvendidos__bloque h2 {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #E49E0040;
+}
+
+.index__masvendidos__bloque__productos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.index__masvendidos__bloque__productos img {
+    margin: 2rem;
+    width: 25%;
+    border-radius: 1rem;
+
 }
 
 /*AQUI TERMINA EL MAIN DEL INDEX*/
@@ -414,6 +457,10 @@
 }
 
 .quienessomos__section__historia {
+    overflow: hidden;
+}
+
+.quienessomos__section__historia__p {
     font-family: 'Architects Daughter', cursive;
     font-size: 1.7rem;
     color: #000;
@@ -624,6 +671,7 @@
     line-height: 1.5rem;
     margin: 0.2rem;
     width: 100%;
+    border-radius: 0.5rem;
 }
 
 .contacto__form__form__input:focus {
@@ -635,6 +683,7 @@
     width: 100%;
     grid-column: 1/3;
     margin: 0.2rem;
+    border-radius: 0.5rem;
 }
 
 .contacto__form__form textarea:focus {
@@ -643,16 +692,21 @@
 
 
 .contacto__form__form--enviar {
-    /*border: outset 2px #bbb;*/
+    border: none;
+    border-radius: 0.5rem;
     width: 35%;
-    height: 1.5rem;
+    height: 2rem;
     grid-column: 1/3;
     justify-self: end;
     align-self: center;
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 800;
+    background-color: #E49E0060;
+    color: #000;
 }
 
-/*.contacto__form__form--enviar:hover {
-    border: inset 2px #bbb;
+.contacto__form__form--enviar:hover {
+    border: outset 2px #bbb;
 }
 */
 
@@ -769,6 +823,13 @@
     .footer__logo img:hover {
         width: 14rem;
     }
+    .index__masvendidos__bloque__productos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .index__masvendidos__bloque__productos img {
+        width: 80%;
+    }
     html {
         font-size: 10px;
     }
@@ -814,7 +875,6 @@
         border-top: none;
     }
     .header__mobile {
-        color: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -827,26 +887,35 @@
     .nav {
         display: none !important;
     }
-    .index__subtitulo {
-        top: 4.5rem;
-        left: 0;
-        width: 100%;
-        text-align: center;
-    }
     .index__portada img {
         display: none;
     }
-    .header__logo {
+    .logo {
         display: none;
     }
-    .header__logo--indexmobile {
+    .logo--indexmobile {
         width: 100%;
         display: block;
         text-align: center;
         z-index: 99;
+        animation-name: desvanecer;
+        animation-iteration-count: infinite;
+        animation-duration: 6s;
     }
-    #carouselExampleControls {
-        display: none;
+}
+
+@keyframes desvanecer {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -859,7 +928,7 @@
         "texto"
         "fotos";
     }
-    .quienessomos__section__historia {
+    .quienessomos__section__historia__p {
         padding-right: 0;
     }
     .quienessomos__section__img--1 {
@@ -887,43 +956,10 @@
 }
 
 @media screen and (max-width: 420px){
-    .header {
-        border-top: none;
-    }
-    .header__mobile {
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        z-index: 50;
-    }
-    .header__buscador {
-        display: none;
-    }
-    .nav {
-        display: none;
-    }
-    .index__subtitulo {
-        top: 4.5rem;
-        left: 0;
-        width: 100%;
-        text-align: center;
-    }
-    .index__portada img {
-        display: none;
-    }
-    .header__logo {
-        display: none;
-    }
-    .header__logo--indexmobile {
-        width: 100%;
-        display: block;
-        text-align: center;
-        z-index: 99;
-    }
     .productos__section__prod {
         width: 90%;
     }
 }
+
+
 
