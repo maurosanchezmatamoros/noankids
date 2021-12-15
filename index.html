@@ -16,53 +16,73 @@
 <!-- Encabezado fijo de la web -->
 
 <body>
-    <header>
-        <div class="header">
-            <nav class="nav">
-                <ul class="nav__menu">
-                    <li ><a href="pages/quienessomos.html">QUIENES SOMOS</a></li>
-                    <li ><a href="pages/productos.html">PRODUCTOS</a></li>
-                    <li ><a href="pages/novedades.html">NOVEDADES</a></li>
-                    <li ><a href="pages/contacto.html">CONTACTO</a></li>
-                </ul>
-            </nav>
-            <div class="header__buscador">
-                <input class="header__buscador__input" type="text" placeholder=" Buscar">
-                <div class="header__buscador__redes">
-                    <a href="https://www.facebook.com/Noan-kids-105169454315117/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                    <a href="https://www.instagram.com/noankids" target="_blank"><i class="fab fa-instagram"></i></a>
-                </div>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__menu">
+                <li ><a href="pages/quienessomos.html">QUIENES SOMOS</a></li>
+                <li ><a href="pages/productos.html">PRODUCTOS</a></li>
+                <li ><a href="pages/novedades.html">NOVEDADES</a></li>
+                <li ><a href="pages/contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+        <div class="header__buscador">
+            <input class="header__buscador__input" type="text" placeholder=" Buscar">
+            <div class="header__buscador__redes">
+                <a href="https://www.facebook.com/Noan-kids-105169454315117/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/noankids" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
-            <nav class="header__mobile">
-                <div class="header__mobile__noankids"><span class="header__mobile__noan">NOAN </span><span class="header__mobile__kids">KIDS</span></div>
-                <input type="checkbox" id="hamburguesa">
-                <label for="hamburguesa"><i class="fas fa-bars"></i></label>
-                <ul class="nav__responsive__menu">
-                    <li ><a href="pages/quienessomos.html">QUIENES SOMOS</a></li>
-                    <li ><a href="pages/productos.html">PRODUCTOS</a></li>
-                    <li ><a href="pages/novedades.html">NOVEDADES</a></li>
-                    <li ><a href="pages/contacto.html">CONTACTO</a></li>
-                </ul>
-            </nav>
         </div>
-        <div class="header__logo">
-            <a href="index.html"><IMG src="assets/img/logo-sin-fondo.png" alt="noan kids logo" class="header__logo__img"></IMG></a>
-        </div>
-        <div class="header__logo--indexmobile">
-            <a href="index.html"><IMG src="assets/img/logo-sin-fondo.png" alt="noan kids logo" class="header__logo__img--indexmobile"></IMG></a>
-        </div>
+        <nav class="header__mobile">
+            <div class="header__mobile__noankids"><span class="header__mobile__noan">NOAN </span><span class="header__mobile__kids">KIDS</span></div>
+            <input type="checkbox" id="hamburguesa">
+            <label for="hamburguesa"><i class="fas fa-bars"></i></label>
+            <ul class="nav__responsive__menu">
+                <li ><a href="pages/quienessomos.html">QUIENES SOMOS</a></li>
+                <li ><a href="pages/productos.html">PRODUCTOS</a></li>
+                <li ><a href="pages/novedades.html">NOVEDADES</a></li>
+                <li ><a href="pages/contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
     </header>
 
 <!-- Cuerpo de la web variable -->
 
 
-    <main>
+    <main class="index__main">
         <section>
-            <h2 class="index__subtitulo">Juegos didácticos</h2>
-            <div class="index__portada">
-                <img class="index__portada__img1" src="assets/img/principal.jpg" alt="chicos jugando">
-                <img class="index__portada__img2" src="assets/img/principal2.jpg" alt="chicos jugando">
-                <img class="index__portada__img3" src="assets/img/principal3.jpg" alt="chicos jugando">
+            <div class="logo">
+                <a href="index.html"><IMG src="assets/img/logo-sin-fondo.png" alt="noan kids logo" class="logo__img"></IMG></a>
+            </div>
+            <div class="logo--indexmobile">
+                <a href="index.html"><IMG src="assets/img/logo-sin-fondo.png" alt="noan kids logo" class="logo__img--indexmobile"></IMG></a>
+            </div>
+        </section>
+        <section class="index">
+            <div class="index__divportada">
+                <div class="index__portada">
+                    <div class="index__portada__img">
+                        <img src="assets/img/principal.jpg" alt="chicos jugando">
+                    </div>
+                    <div class="index__portada__img">
+                        <img src="assets/img/principal2.jpg" alt="chicos jugando">
+                    </div>
+                    <div class="index__portada__img">
+                        <img src="assets/img/principal3.jpg" alt="chicos jugando">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="index__juegosdidacticos">
+            <h2>Juegos Didácticos</h2>
+        </section>
+        <section class="index__masvendidos">
+            <div class="index__masvendidos__bloque">
+                <h2>Productos más vendidos</h2>
+                <div class="index__masvendidos__bloque__productos">
+                    <img src="./assets/img/productos/animales-madera.jpg" alt="animales de madera">
+                    <img src="./assets/img/productos/cascabeles.jpg" alt="jueguetes con cascabeles">
+                    <img src="./assets/img/productos/armonicas.jpg" alt="armonicas de juguete">
+                </div>
             </div>
         </section>
     </main>
