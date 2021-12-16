@@ -1,0 +1,128 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: $color185;
+    height: 4rem;
+    width: 100%;
+    border-bottom: solid 0.5rem $color1;
+    border-top: solid 0.5rem #fff;
+    .nav {
+        display: flex;
+        align-items: center !important;
+        justify-content: space-around;
+        width: 70%;
+        margin-left: 17vw;
+        &__menu {
+            display: flex;
+            align-items: center !important;
+            justify-content: space-around;
+            font-family: $font-kids;
+            font-weight: 500;
+            font-size: 1.6rem;
+            text-shadow: 1px 1px 1px #333;
+            text-decoration: none;
+            height: 3rem;
+            width: 100%;
+            margin: 0 !important;
+            li {
+                display: inline-block;
+                text-align: center;
+            }
+            a {
+                color: #fff;
+                &:hover {
+                    text-shadow: 3px 3px 3px #111;
+                }
+            }
+        }
+    }
+    &__buscador {
+        display: flex;
+        width: 30%;
+        align-items: center;
+        justify-content: space-around;
+        &__input {
+            display: inline-block;
+            border: none;
+            height: 1.5rem;
+            width: 65%;
+            transition: all 3s;
+            &:focus {
+                outline: #000, solid, 1rem;
+                font-size: 1.2rem;
+            }
+        }
+        &__redes {
+            display: inline-block;
+            font-size: 1.5rem;
+            min-width: 50px;
+            a {
+                color: #fff;
+                display: inline-block;
+                transition: all 0.05s;
+                &:hover {
+                    color: #eee;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    &__mobile {
+        display: none;
+        color: #fff;
+        &__noankids {
+            display: inline-block;
+            justify-self: center;
+            text-shadow: 1px 1px 2px #333;
+        }
+        &__noan {
+            font-family: $font-noan;
+            font-size: 2.8rem;
+            font-weight: 100;
+        }
+        &__kids {
+            font-family: $font-kids;
+            font-weight: 500;
+            font-size: 2.6rem;
+        }
+        label {
+            color: #fff;
+            font-size: 2.5rem;
+            position: absolute;
+            right: 1rem;
+            cursor: pointer;
+        }
+        input {
+            color: #fff;
+            width: 2.5rem;
+            height: 2.5rem;
+            opacity: 0;
+            position: absolute;
+            right: 1rem;
+        }
+        .nav__responsive__menu {
+            display: block;
+            position: absolute;
+            top: -100vh;
+            width: 100%;
+            height: calc(100vh - 4rem);
+            background-color: #000c;
+            font-family: $font-kids;
+            font-size: 2rem;
+            text-align: center;
+            line-height: 7rem;
+            a {
+                color: #fff;
+            }
+            li:hover {
+                background-color: #fff4;
+            }
+        }
+        #hamburguesa:checked ~ .nav__responsive__menu {
+            top: 4rem;
+        }
+        #hamburguesa>input:not(:checked) ~ .nav__responsive__menu {
+            top: -100vh;
+        }
+    }
+}

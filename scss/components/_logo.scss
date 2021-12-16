@@ -1,0 +1,31 @@
+.index__main {
+    background-color: $color140;
+}
+    
+.logo {
+    &__img {
+        position: absolute;
+        width: 15vw;
+        top: 0.2rem;
+        left: 0.2rem;
+        z-index: 99;
+        transition: width 1s, opacity 5s;
+        &:hover {
+            width: 17vw;
+            opacity: 0.5;
+        }
+    }
+}
+
+.logo--indexmobile {
+    display: none;
+    .logo__img--indexmobile {
+        position: inherit;
+        width: 80%;
+        padding: 4rem 2rem;
+        &:hover {
+            padding: 4rem 2rem;
+        }
+    }
+}
+

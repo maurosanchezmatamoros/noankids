@@ -214,7 +214,7 @@
     position: relative;
     border-radius: 0.6rem;
     margin: 1rem;
-    width: calc(100%-1rem);
+    width: calc(100% - 1rem);
     overflow: hidden;
     
 }

@@ -1,0 +1,72 @@
+.footer {
+    background-color: $color285;
+    height: 20rem;
+    width: 100%;
+    border-top: solid 0.5rem $color2;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 75% 25%;
+    grid-template-areas:
+    "menu datos1 logo"
+    "menu datos2 logo";
+    align-items: center;
+    &__menu {
+        color: #fff;
+        font-family: $font-kids;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+        text-shadow: 1px 1px 1px #333;
+        grid-area: menu;
+        a {
+            color: #fff;
+            &:hover {
+                text-shadow: 3px 3px 3px #111;
+            }
+        }
+    }
+    &__datos {
+        text-align: center;
+        color: #fff;
+        line-height: 2.8rem;
+        font-family: $font-kids;
+        letter-spacing: 0.05rem;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        grid-area: datos1;
+        a {
+            color: #fff;
+        }
+        &--noan {
+            font-family: $font-noan;
+            font-size: 1.8rem;
+            font-weight: 100;
+        }
+        &--kids {
+            font-family: $font-kids;
+            font-weight: 500;
+            font-size: 1.7rem;
+        }
+    }
+    &__datos__ubicacion {
+        text-align: center;
+        color: #fff;
+        line-height: 1.5rem;
+        font-family: $font-kids;
+        letter-spacing: 0.05rem;
+        font-size: 1.5rem;
+        grid-area: datos2;
+        align-self: flex-start;
+    }
+    &__logo {
+        grid-area: logo;
+        img {
+            width: 14rem;
+            transition: width 1.5s;
+            &:hover {
+                width: 18rem;
+            }
+        }
+    }
+}

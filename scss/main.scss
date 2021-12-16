@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+}
+
+
+@import "./components/_variables";
+@import "./components/_header";
+@import "./components/_footer";
+@import "./components/_logo";
+@import "./components/_index";
+@import "./components/_quienessomos";
+@import "./components/_productos";
+@import "./components/_novedades";
+@import "./components/_contacto";
+@import "./components/_mediaqueries";

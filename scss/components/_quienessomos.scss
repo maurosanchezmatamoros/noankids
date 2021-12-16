@@ -1,0 +1,70 @@
+.quienessomos {
+    background-color: $color140;
+    width: 100%;
+}
+
+.quienessomos__section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 3rem auto;
+    grid-template-areas:
+    "titulo titulo"
+    "fotos texto";
+    align-items: center;
+    grid-gap: 1rem;
+    margin: 1rem 1rem 4rem 1rem;
+    .quienessomos__titulo {
+        font-family: $font-kids;
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+        color: #000;
+        font-weight: 100;
+        text-align: center;
+        align-self: center;
+        width: 100%;
+        grid-area: titulo;
+    }
+    &__img {
+        grid-area: fotos;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 60% 40%;
+        grid-template-areas:
+        "quienessomos1 quienessomos1"
+        "quienessomos2 quienessomos3";
+        justify-items: center;
+        align-items: center;
+        &--1 {
+            width: 20rem;
+            margin: 1rem 3rem;
+            grid-area: quienessomos1;
+        }
+        &--2 {
+            width: 15rem;
+            margin: 1rem;
+            grid-area: quienessomos2;
+        }
+        &--3 {
+            width: 15rem;
+            margin: 1rem;
+            grid-area: quienessomos3;
+        }
+    }
+    &__historia {
+        overflow: hidden;
+        &__p {
+            font-family: $font-kids;
+            font-size: 1.7rem;
+            color: #000;
+            font-weight: 100;
+            text-align: justify;
+            grid-area: texto;
+            line-height: 2.3rem;
+            padding-right: 2rem;
+            align-self: flex-start;
+        }
+    }
+}
+
+
+
