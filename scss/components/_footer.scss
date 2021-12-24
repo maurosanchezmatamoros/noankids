@@ -2,7 +2,7 @@
     background-color: $color285;
     height: 20rem;
     width: 100%;
-    border-top: solid 0.5rem $color2;
+    border-top: solid 0.5rem map-get($colores, foot);
     text-align: center;
     display: grid;
     grid-template-columns: 30% 40% 30%;

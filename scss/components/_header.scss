@@ -4,7 +4,7 @@
     background-color: $color185;
     height: 4rem;
     width: 100%;
-    border-bottom: solid 0.5rem $color1;
+    border-bottom: solid 0.5rem map-get($colores, head);
     border-top: solid 0.5rem #fff;
     .nav {
         display: flex;

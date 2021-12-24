@@ -1,0 +1,15 @@
+En components esta el archivo sass2.scss donde incluí...
+
+-Mixin sobre las caracteristicas de las imagenes de la seccion quienes somos.
+-Map con los dos colores principales de la web, y los utilice en los bordes del head y del footer.
+-Extend con las caracteristicas del H2 del index donde dice "Juegos Didacticos".
+
+Estos cambios se hicieron con el unico fin de cumplir con la consigna, no tiene mucha utilidad para el sitio web.
+
+SEO
+
+- Se agregaron keywords a todas las paginas
+- Se incluyo description a cada pagina por separado
+- Se adaptaron los titles para cada pagina
+- Se incluyo 1 solo H1 y H2 para el titulo de cada pagina
+- Se completaron todos los alt de las imagenes

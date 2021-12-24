@@ -35,19 +35,13 @@
         justify-items: center;
         align-items: center;
         &--1 {
-            width: 20rem;
-            margin: 1rem 3rem;
-            grid-area: quienessomos1;
+            @include quienessomosimg (20rem, 1rem 3rem, quienessomos1)
         }
         &--2 {
-            width: 15rem;
-            margin: 1rem;
-            grid-area: quienessomos2;
+            @include quienessomosimg (15rem, 1rem, quienessomos2)
         }
         &--3 {
-            width: 15rem;
-            margin: 1rem;
-            grid-area: quienessomos3;
+            @include quienessomosimg (15rem, 1rem, quienessomos3)
         }
     }
     &__historia {
