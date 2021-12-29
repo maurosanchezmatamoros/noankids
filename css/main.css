@@ -7,17 +7,6 @@
   list-style: none;
 }
 
-.index__juegosdidacticos {
-  width: 100%;
-  font-family: "Architects Daughter", cursive;
-  font-size: 1.4rem;
-  text-align: center;
-  padding: 1rem;
-  background-color: #E49E0060;
-  border-bottom: solid 0.5rem #E49E00;
-  border-top: solid 0.2rem #E49E00;
-}
-
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,7 +30,7 @@
           align-items: center !important;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 70%;
+  width: calc(100% - 6rem);
   margin-left: 17vw;
 }
 
@@ -81,7 +70,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 30%;
+  width: 6rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -438,6 +427,17 @@
   width: 100%;
 }
 
+.index__juegosdidacticos {
+  width: 100%;
+  font-family: "Architects Daughter", cursive;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #E49E0060;
+  border-bottom: solid 0.5rem #E49E00;
+  border-top: solid 0.2rem #E49E00;
+}
+
 .index__masvendidos {
   padding: 2rem;
 }
@@ -571,8 +571,8 @@
   background-color: #E49E0030;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 22% auto;
-      grid-template-columns: 22% auto;
+  -ms-grid-columns: 18% auto;
+      grid-template-columns: 18% auto;
   -ms-grid-rows: 4rem auto;
       grid-template-rows: 4rem auto;
       grid-template-areas: "menu titulo" "menu productos";
@@ -605,16 +605,19 @@
 .productos__aside .productos__menu {
   font-family: "Architects Daughter", cursive;
   line-height: 2.5rem;
-  font-size: 1.6rem;
-  padding: 12rem 0 0 0;
+  font-size: 1.4rem;
+  padding: 10rem 0 0 0;
   text-align: center;
 }
 
 .productos__aside .productos__menu h4 {
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 1px 1px 1px #333;
   background-color: #E49E00;
   margin: 2rem 0.5rem;
   padding: 0 0.2rem;
-  border-radius: 30%;
+  border-radius: 1rem;
   border: outset;
 }
 
@@ -628,39 +631,95 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: productos;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 1rem;
   padding-bottom: 4rem;
+  margin: 1rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 .productos__section__prod {
-  width: 30%;
-  display: inline-block;
-  margin: 1rem;
+  border: 2px solid #E49E00;
+  border-radius: 1rem;
+  background-color: #E49E0030;
+  padding: 1rem;
+  width: 100%;
   text-align: center;
 }
 
-.productos__section__prod img {
-  width: 90%;
+.productos__section img {
+  width: 100%;
 }
 
-.productos__section__prod p {
+.productos__section p {
   font-family: "Architects Daughter", cursive;
   line-height: 1.8rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin-top: 0.3rem;
 }
 
-.novedades {
+.productos .item1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+.productos .item2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 3 / 1 / 3 / 3;
+}
+
+.productos .item3 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 4 / 2 / 5 / 4;
+}
+
+.productos .item4 {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 7 / 2 / 8 / 4;
+}
+
+.productos .item5 {
+  -ms-grid-row: 10;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 10 / 3 / 12 / 4;
+}
+
+.productos .item6 {
+  -ms-grid-row: 12;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 12 / 2 / 13 / 4;
+}
+
+.productos .item7 {
+  -ms-grid-row: 13;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 13 / 1 / 14 / 3;
+}
+
+.recursos {
   background-color: #E49E0040;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -671,7 +730,7 @@
           flex-direction: column;
 }
 
-.novedades__titulo {
+.recursos__titulo {
   font-family: "Architects Daughter", cursive;
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
@@ -681,17 +740,29 @@
   text-align: center;
 }
 
-.novedades__bloque {
+.recursos__frase {
+  font-family: "Architects Daughter", cursive;
+  text-align: center;
+  line-height: 2rem;
+  padding: 2rem;
+  width: calc(100%-2rem);
+  font-size: 1.4rem;
+  background-color: #E49E0030;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.recursos__bloque {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30% auto;
-      grid-template-columns: 30% auto;
+  -ms-grid-columns: 60% auto;
+      grid-template-columns: 60% auto;
   -ms-grid-rows: 3rem auto;
       grid-template-rows: 3rem auto;
   padding: 0 2rem 3rem 2rem;
 }
 
-.novedades__bloque__titulo {
+.recursos__bloque__titulo {
   font-family: "Architects Daughter", cursive;
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
@@ -702,19 +773,12 @@
   grid-column: 1/3;
 }
 
-.novedades__bloque__img {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  max-width: 100%;
+.recursos__bloque iframe {
+  width: 100%;
+  height: 315px;
 }
 
-.novedades__bloque__img img {
-  padding: 1rem;
-  max-width: 100%;
-  max-height: 20rem;
-}
-
-.novedades__bloque__p {
+.recursos__bloque__p {
   font-family: "Architects Daughter", cursive;
   padding: 1rem;
   line-height: 2rem;
@@ -861,7 +925,7 @@
 }
 
 @media screen and (max-width: 1400px) {
-  .novedades__titulo {
+  .recursos__titulo {
     padding: 3rem;
   }
   .productos__menu {
@@ -870,19 +934,7 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .productos__section__prod {
-    width: 45%;
-  }
-  .header__buscador__input {
-    display: none;
-  }
-  .header__buscador {
-    width: 15%;
-  }
-  .nav {
-    width: 85% !important;
-  }
-  .novedades__titulo {
+  .recursos__titulo {
     padding: 2rem;
   }
   .productos__menu {
@@ -922,8 +974,31 @@
 }
 
 @media screen and (max-width: 760px) {
-  .header__buscador__input {
-    display: none;
+  .productos {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 3rem auto auto;
+        grid-template-rows: 3rem auto auto;
+        grid-template-areas: "titulo" "menu" "productos";
+  }
+  .productos__aside {
+    background-color: initial;
+  }
+  .productos__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 1rem !important;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .productos__menu h4 {
+    display: inline-block;
+    width: auto;
+    padding: 0 2rem !important;
+    margin: 0.5rem !important;
   }
   .header__buscador {
     display: none;
@@ -958,40 +1033,14 @@
 }
 
 @media screen and (max-width: 580px) {
-  .productos {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    -ms-grid-rows: 3rem auto auto;
-        grid-template-rows: 3rem auto auto;
-        grid-template-areas: "titulo" "menu" "productos";
-  }
-  .productos__aside {
-    background-color: initial;
-  }
-  .productos__menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding: 1rem !important;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .productos__menu h4 {
-    display: inline-block;
-    width: auto;
-    padding: 0 2rem !important;
-    margin: 0.5rem !important;
-  }
-  .novedades__bloque {
+  .recursos__bloque {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     -ms-grid-rows: 3rem auto auto;
         grid-template-rows: 3rem auto auto;
     padding: 0 2rem 3rem 2rem;
   }
-  .novedades__bloque__titulo {
+  .recursos__bloque__titulo {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
@@ -999,6 +1048,9 @@
 }
 
 @media screen and (max-width: 550px) {
+  .productos__section {
+    display: block;
+  }
   .header {
     border-top: none;
   }

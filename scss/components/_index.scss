@@ -53,7 +53,14 @@
 }
 
 .index__juegosdidacticos {
-            @extend %juegos-didacticos;
+    width: 100%;
+    font-family: $font-kids;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: $color160;
+    border-bottom: solid 0.5rem $color1;
+    border-top: solid 0.2rem $color1;
 }
 
 .index__masvendidos {

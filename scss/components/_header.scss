@@ -4,13 +4,13 @@
     background-color: $color185;
     height: 4rem;
     width: 100%;
-    border-bottom: solid 0.5rem map-get($colores, head);
+    border-bottom: solid 0.5rem $color1;
     border-top: solid 0.5rem #fff;
     .nav {
         display: flex;
         align-items: center !important;
         justify-content: space-around;
-        width: 70%;
+        width: calc(100% - 6rem);
         margin-left: 17vw;
         &__menu {
             display: flex;
@@ -38,7 +38,7 @@
     }
     &__buscador {
         display: flex;
-        width: 30%;
+        width: 6rem;
         align-items: center;
         justify-content: space-around;
         &__input {

@@ -1,5 +1,5 @@
 @media screen and (max-width: 1400px){
-    .novedades__titulo {
+    .recursos__titulo {
         padding: 3rem;
     }
     .productos__menu {
@@ -8,19 +8,7 @@
 }
 
 @media screen and (max-width: 1200px){
-    .productos__section__prod {
-        width: 45%;
-    }
-    .header__buscador__input {
-        display: none;
-    }
-    .header__buscador {
-        width: 15%;
-    }
-    .nav {
-        width: 85%!important;
-    }
-    .novedades__titulo {
+    .recursos__titulo {
         padding: 2rem;
     }
     .productos__menu {
@@ -63,8 +51,28 @@
 
 
 @media screen and (max-width: 760px){
-    .header__buscador__input {
-        display: none;
+    .productos {
+        grid-template-columns: 100%;
+        grid-template-rows: 3rem auto auto;
+        grid-template-areas:
+        "titulo"
+        "menu"
+        "productos";
+    }
+    .productos__aside {
+        background-color: initial;
+    }
+    .productos__menu {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem!important;
+        justify-content: space-around;
+    }
+    .productos__menu h4 {
+        display: inline-block;
+        width: auto;
+        padding: 0 2rem!important;
+        margin: 0.5rem!important;
     }
     .header__buscador {
         display: none;
@@ -94,41 +102,20 @@
 }
 
 @media screen and (max-width: 580px){
-    .productos {
-        grid-template-columns: 100%;
-        grid-template-rows: 3rem auto auto;
-        grid-template-areas:
-        "titulo"
-        "menu"
-        "productos";
-    }
-    .productos__aside {
-        background-color: initial;
-    }
-    .productos__menu {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 1rem!important;
-        justify-content: space-around;
-    }
-    .productos__menu h4 {
-        display: inline-block;
-        width: auto;
-        padding: 0 2rem!important;
-        margin: 0.5rem!important;
-
-    }
-    .novedades__bloque {
+    .recursos__bloque {
         grid-template-columns: 100%;
         grid-template-rows: 3rem auto auto;
         padding: 0 2rem 3rem 2rem;
     }
-    .novedades__bloque__titulo {
+    .recursos__bloque__titulo {
         grid-column: 1/2;
     }
 }
 
 @media screen and (max-width: 550px){
+    .productos__section {
+        display: block;
+    }
     .header {
         border-top: none;
     }
