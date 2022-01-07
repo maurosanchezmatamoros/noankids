@@ -9,6 +9,15 @@
     justify-items: center;
     align-items: center;
     padding-bottom: 2rem;
+    @media screen and (max-width: 850px){
+        grid-template-columns: 100%;
+        grid-template-rows: 4rem auto auto;
+        grid-template-areas:
+        "titulo"
+        "form"
+        "ubicacion";
+        grid-gap: 1rem;
+    }
     &__titulo {
         font-family: $font-kids;
         font-size: 1.6rem;

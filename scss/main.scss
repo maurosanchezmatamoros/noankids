@@ -3,8 +3,22 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none !important;
-    list-style: none;
+    list-style: none !important;
 }
+
+#chatwpp {
+    z-index: 2;
+    width: 7rem;
+    position: fixed;
+    bottom: 0.5rem;
+    right: -0.5rem;
+    :hover {
+        opacity: 0.2;
+        transition: 1.5s
+    }
+}
+
+
 
 
 @import "./components/_variables";

@@ -13,6 +13,14 @@
     align-items: center;
     grid-gap: 1rem;
     margin: 1rem 1rem 4rem 1rem;
+    @media screen and (max-width: 500px){
+        grid-template-columns: 100%;
+        grid-template-rows: 3rem auto auto;
+        grid-template-areas:
+        "titulo"
+        "texto"
+        "fotos";
+    }
     .quienessomos__titulo {
         font-family: $font-kids;
         font-size: 1.8rem;
@@ -34,20 +42,38 @@
         "quienessomos2 quienessomos3";
         justify-items: center;
         align-items: center;
+        @media screen and (max-width: 850px){
+            grid-template-columns: 100%;
+            grid-template-rows: 40% 30% 30%;
+            grid-template-areas:
+            "quienessomos1"
+            "quienessomos2"
+            "quienessomos3";
+            grid-row-gap: 1rem;
+        }
         &--1 {
             width: 20rem;
             margin: 1rem 3rem;
             grid-area: quienessomos1;
+            @media screen and (max-width: 500px){
+                width: 90%;
+            }
         }
         &--2 {
             width: 15rem;
             margin: 1rem;
             grid-area: quienessomos2;
+            @media screen and (max-width: 500px){
+                width: 90%;
+            }
         }
         &--3 {
             width: 15rem;
             margin: 1rem;
             grid-area: quienessomos3;
+            @media screen and (max-width: 500px){
+                width: 90%;
+            }
         }
     }
     &__historia {
@@ -62,6 +88,9 @@
             line-height: 2.3rem;
             padding-right: 2rem;
             align-self: flex-start;
+            @media screen and (max-width: 500px){
+                padding-right: 0;
+            }
         }
     }
 }

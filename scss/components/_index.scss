@@ -5,7 +5,7 @@
     &__divportada {
         position: relative;
         border-radius: 0.6rem;
-        margin: 1rem;
+        margin: 2rem;
         width: calc(100% - 1rem);
         overflow: hidden;
         .index__portada {
@@ -13,29 +13,38 @@
             transform: translate3d(0, 0, 0);
             transition: all 600ms;
             animation-name: carrousel;
-            animation-duration: 10s;
+            animation-duration: 15s;
             animation-direction: alternate;
             animation-fill-mode: forwards;
             animation-iteration-count: infinite;
             @keyframes carrousel {
                 0% {
-                    transform: translate3d(calc(-100% * 0), 0, 0)
-                }
-                15% {
-                    transform: translate3d(calc(-100% * 0), 0, 0)
-                }
-                25% {
                     transform: translate3d(calc(-100% * 1), 0, 0)
                 }
-                65% {
+                20% {
+                    transform: translate3d(calc(-100% * 1), 0, 0)
+                }
+                30% {
+                    transform: translate3d(calc(-100% * 2), 0, 0)
+                }
+                45% {
+                    transform: translate3d(calc(-100% * 2), 0, 0)
+                }
+                55% {
                     transform: translate3d(calc(-100% * 1), 0, 0)
                 }
                 75% {
-                    transform: translate3d(calc(-100% * 2), 0, 0)
+                    transform: translate3d(calc(-100% * 1), 0, 0)
+                }
+                85% {
+                    transform: translate3d(calc(-100% * 0), 0, 0)
                 }
                 100% {
-                    transform: translate3d(calc(-100% * 2), 0, 0)
+                    transform: translate3d(calc(-100% * 0), 0, 0)
                 }
+            }
+            @media screen and (max-width: 550px){
+                display: none;
             }
             &__img {
                 position: relative;
@@ -79,10 +88,72 @@
                 &__productos {
                     display: flex;
                     justify-content: space-around;
-                    img {
-                        margin: 2rem;
-                        width: 25%;
+                    @media screen and (max-width: 650px){
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    &__img {
+                        margin: 2rem 1rem;
+                        width: 20rem;
+                        height: 20rem;
                         border-radius: 1rem;
+                        border: solid 2px $color170;
+                        background-color: $color1 !important;
+                        background-size: 100% !important;
+                        background-repeat: no-repeat !important;
+                        background-position: center !important;
+                        @media screen and (max-width: 650px){
+                            width: 80%;
+                            height: 80vw;
+                        }
+                    }
+                    &__img1 {
+                        animation-name: cambioimagen1;
+                        animation-iteration-count: infinite;
+                        animation-duration: 10s;
+                        @keyframes cambioimagen1{
+                            0% {
+                                background: url(../../assets/img/productos/cocinita.jpg);
+                            }
+                            50% {
+                                background: url(../../assets/img/productos/maracas-madera.jpg);
+                            }
+                            100% {
+                                background: url(../../assets/img/productos/cocinita.jpg);
+                            }
+                        }
+                    }
+                    &__img2 {
+                        animation-name: cambioimagen2;
+                        animation-iteration-count: infinite;
+                        animation-duration: 10s;
+                        @keyframes cambioimagen2{
+                            0% {
+                                background: url(../../assets/img/productos/imantados2.jpg);
+                            }
+                            50% {
+                                background: url(../../assets/img/productos/titeres-dedo.jpg);
+                            }
+                            100% {
+                                background: url(../../assets/img/productos/imantados2.jpg);
+                            }
+                        }
+                    }
+                    &__img3 {
+                        animation-name: cambioimagen3;
+                        animation-iteration-count: infinite;
+                        animation-duration: 10s;
+                        @keyframes cambioimagen3{
+                            0% {
+                                background: url(../../assets/img/productos/titere-cono.jpg);
+                            }
+                            50% {
+                                background: url(../../assets/img/productos/equilibristas.jpg);
+                            }
+                            100% {
+                                background: url(../../assets/img/productos/titere-cono.jpg);
+                            }
+                        }
                     }
                 }
             }

@@ -5,16 +5,24 @@
     height: 4rem;
     width: 100%;
     border-bottom: solid 0.5rem $color1;
-    border-top: solid 0.5rem #fff;
+    @media screen and (max-width: 550px){
+        border-top: none;
+    }
     .nav {
         display: flex;
-        align-items: center !important;
+        align-items: center;
         justify-content: space-around;
         width: calc(100% - 6rem);
         margin-left: 17vw;
+        @media screen and (max-width: 760px){
+            width: 100%;
+        }
+        @media screen and (max-width: 550px){
+            display: none;
+        }
         &__menu {
             display: flex;
-            align-items: center !important;
+            align-items: center;
             justify-content: space-around;
             font-family: $font-kids;
             font-weight: 500;
@@ -23,7 +31,7 @@
             text-decoration: none;
             height: 3rem;
             width: 100%;
-            margin: 0 !important;
+            margin: 0;
             li {
                 display: inline-block;
                 text-align: center;
@@ -38,19 +46,11 @@
     }
     &__buscador {
         display: flex;
-        width: 6rem;
+        width: 9rem;
         align-items: center;
         justify-content: space-around;
-        &__input {
-            display: inline-block;
-            border: none;
-            height: 1.5rem;
-            width: 65%;
-            transition: all 3s;
-            &:focus {
-                outline: #000, solid, 1rem;
-                font-size: 1.2rem;
-            }
+        @media screen and (max-width: 760px){
+            display: none;
         }
         &__redes {
             display: inline-block;
@@ -70,6 +70,13 @@
     &__mobile {
         display: none;
         color: #fff;
+        @media screen and (max-width: 550px){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            z-index: 50;
+        }
         &__noankids {
             display: inline-block;
             justify-self: center;

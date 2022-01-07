@@ -11,6 +11,13 @@
     "menu datos1 logo"
     "menu datos2 logo";
     align-items: center;
+    @media screen and (max-width: 490px){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 85% 15%;
+        grid-template-areas:
+        "logo menu"
+        "datos2 datos2";
+    }
     &__menu {
         color: #fff;
         font-family: $font-kids;
@@ -35,6 +42,9 @@
         font-size: 1.5rem;
         margin-top: 1rem;
         grid-area: datos1;
+        @media screen and (max-width: 490px){
+            display: none;
+        }
         a {
             color: #fff;
         }
@@ -66,6 +76,9 @@
             transition: width 1.5s;
             &:hover {
                 width: 18rem;
+                @media screen and (max-width: 650px){
+                    width: 14rem;
+                }
             }
         }
     }

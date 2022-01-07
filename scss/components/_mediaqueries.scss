@@ -1,19 +1,4 @@
-@media screen and (max-width: 1400px){
-    .recursos__titulo {
-        padding: 3rem;
-    }
-    .productos__menu {
-        padding: 10rem 0 0 0;
-    }
-}
-
 @media screen and (max-width: 1200px){
-    .recursos__titulo {
-        padding: 2rem;
-    }
-    .productos__menu {
-        padding: 8rem 0 0 0;
-    }
     html {
         font-size: 15px;
     }
@@ -26,183 +11,19 @@
 }
 
 @media screen and (max-width: 850px){
-    .quienessomos__section__img {
-        grid-template-columns: 100%;
-        grid-template-rows: 40% 30% 30%;
-        grid-template-areas:
-        "quienessomos1"
-        "quienessomos2"
-        "quienessomos3";
-        grid-row-gap: 1rem;
-    }
-    .contacto {
-        grid-template-columns: 100%;
-        grid-template-rows: 4rem auto auto;
-        grid-template-areas:
-        "titulo"
-        "form"
-        "ubicacion";
-        grid-gap: 1rem;
-    }
     html {
         font-size: 12px;
     }
 }
 
-
 @media screen and (max-width: 760px){
-    .productos {
-        grid-template-columns: 100%;
-        grid-template-rows: 3rem auto auto;
-        grid-template-areas:
-        "titulo"
-        "menu"
-        "productos";
-    }
-    .productos__aside {
-        background-color: initial;
-    }
-    .productos__menu {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 1rem!important;
-        justify-content: space-around;
-    }
-    .productos__menu h4 {
-        display: inline-block;
-        width: auto;
-        padding: 0 2rem!important;
-        margin: 0.5rem!important;
-    }
-    .header__buscador {
-        display: none;
-    }
-    .nav {
-        width: 100%!important;
-    }
     html {
         font-size: 11px;
     }
 }
 
 @media screen and (max-width: 650px){
-    .footer__logo img:hover {
-        width: 14rem;
-    }
-    .index__masvendidos__bloque__productos {
-        flex-direction: column;
-        align-items: center;
-    }
-    .index__masvendidos__bloque__productos img {
-        width: 80%;
-    }
     html {
         font-size: 10px;
-    }
-}
-
-@media screen and (max-width: 580px){
-    .recursos__bloque {
-        grid-template-columns: 100%;
-        grid-template-rows: 3rem auto auto;
-        padding: 0 2rem 3rem 2rem;
-    }
-    .recursos__bloque__titulo {
-        grid-column: 1/2;
-    }
-}
-
-@media screen and (max-width: 550px){
-    .productos__section {
-        display: block;
-    }
-    .header {
-        border-top: none;
-    }
-    .header__mobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        z-index: 50;
-    }
-    .header__buscador {
-        display: none;
-    }
-    .nav {
-        display: none!important;
-    }
-    .index__portada img {
-        display: none;
-    }
-    .logo {
-        display: none;
-    }
-    .logo--indexmobile {
-        width: 100%;
-        display: block;
-        text-align: center;
-        z-index: 99;
-        animation-name: desvanecer;
-        animation-iteration-count: infinite;
-        animation-duration: 6s;
-        @keyframes desvanecer {
-            0% {
-                opacity: 1;
-            }
-            80% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 0.3;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-    }
-}
-
-
-
-@media screen and (max-width: 500px){
-    .quienessomos__section {
-        grid-template-columns: 100%;
-        grid-template-rows: 3rem auto auto;
-        grid-template-areas:
-        "titulo"
-        "texto"
-        "fotos";
-    }
-    .quienessomos__section__historia__p {
-        padding-right: 0;
-    }
-    .quienessomos__section__img--1 {
-        width: 90%;
-    }
-    .quienessomos__section__img--2 {
-        width: 90%;
-    }
-    .quienessomos__section__img--3 {
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 490px){
-    .footer {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 85% 15%;
-        grid-template-areas:
-        "logo menu"
-        "datos2 datos2";
-    }
-    .footer__datos {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 420px){
-    .productos__section__prod {
-        width: 90%;
     }
 }
