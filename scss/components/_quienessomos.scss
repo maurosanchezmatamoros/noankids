@@ -21,6 +21,14 @@
         "texto"
         "fotos";
     }
+    @media screen and (min-height: 1000px){
+        margin: 4rem 1rem 10rem 1rem;
+        grid-row-gap: 4rem;
+    }
+    @media screen and (min-height: 1100px){
+        margin: 5rem 1rem 14rem 1rem;
+        grid-row-gap: 4rem;
+    }
     .quienessomos__titulo {
         font-family: $font-kids;
         font-size: 1.8rem;

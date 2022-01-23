@@ -756,6 +756,20 @@
   }
 }
 
+@media screen and (min-height: 1000px) {
+  .quienessomos__section {
+    margin: 4rem 1rem 10rem 1rem;
+    grid-row-gap: 4rem;
+  }
+}
+
+@media screen and (min-height: 1100px) {
+  .quienessomos__section {
+    margin: 5rem 1rem 14rem 1rem;
+    grid-row-gap: 4rem;
+  }
+}
+
 .quienessomos__section .quienessomos__titulo {
   font-family: "Architects Daughter", cursive;
   font-size: 1.8rem;
